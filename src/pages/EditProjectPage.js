@@ -39,7 +39,7 @@ function EditProjectPage(props) {
     // Send the token through the request "Authorization" Headers   
     axios
       .put(
-        `${API_URL}/api/projects/${projectId}`,
+        `${API_URL}/projects/${projectId}`,
         requestBody,
         { headers: { Authorization: `Bearer ${storedToken}` } }              
       )
@@ -56,7 +56,7 @@ function EditProjectPage(props) {
     // Send the token through the request "Authorization" Headers   
     axios
       .delete(
-        `${API_URL}/api/projects/${projectId}`,
+        `${API_URL}/projects/${projectId}`,
         { headers: { Authorization: `Bearer ${storedToken}` } }           
       )
       .then(() => props.history.push("/projects"))
