@@ -16,7 +16,7 @@ function ProjectListPage() {
     // Send the token through the request "Authorization" Headers
     axios
       .get(
-      `${API_URL}/api/projects`,
+      `${API_URL}/projects`,
       { headers: { Authorization: `Bearer ${storedToken}` } }
     )
       .then((response) => setProjects(response.data))

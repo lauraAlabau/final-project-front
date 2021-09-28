@@ -16,7 +16,7 @@ function EditProjectPage(props) {
     // Send the token through the request "Authorization" Headers 
     axios
       .get(
-        `${API_URL}/api/projects/${projectId}`,
+        `${API_URL}/projects/${projectId}`,
         { headers: { Authorization: `Bearer ${storedToken}` } }    
       )
       .then((response) => {
