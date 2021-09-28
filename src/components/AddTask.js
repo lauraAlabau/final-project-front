@@ -23,7 +23,7 @@ function AddTask(props) {
     // Send the token through the request "Authorization" Headers   
     axios
       .post(
-        `${API_URL}/api/tasks`,
+        `${API_URL}/tasks`,
         requestBody,
         { headers: { Authorization: `Bearer ${storedToken}` } }        
       )
